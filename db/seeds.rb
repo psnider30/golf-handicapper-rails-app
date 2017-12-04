@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Golfer.create(name: 'Paul', email: 'psnider@fake.com', password: 'handicap123')
-Golfer.create(name: 'DJ', email: 'dj@fake.com', password: 'dustin123')
+Golfer.create!([
+  {name: 'Paul', email: "psnider@fake.com", password: 'handicap123', password_confirmation: 'handicap123'},
+  {name: 'DJ', email: "dj@fake.com", password: 'dustin123', password_confirmation: 'dustin123'}
 
 GolfCourse.create(name: 'Pine Valley', description: 'A genuine original, its unique character forged from the sandy pine barrens of southwest Jersey.',
 holes: 18, total_par: 70, course_slope: 153, course_rating: 73.5)
